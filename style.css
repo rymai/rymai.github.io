@@ -1,0 +1,68 @@
+html, body {
+  font-family: "crimson-1","crimson-2",sans-serif;
+  font-size:18px;
+  color:#232336;
+  text-shadow:rgba(255,255,255,0.55) 0 1px 0;
+  text-align:center;
+}
+
+body {
+  background:#333;
+}
+
+h1 {
+  margin:0;
+  font-weight:200;
+  font-size:35px;
+  letter-spacing:-1px;
+}
+
+a {
+  color:#337;
+  text-decoration:none;
+}
+
+a:hover {
+  color:#117;
+  text-decoration:none;
+}
+
+#global {
+  width:370px;
+  margin:50px auto;
+}
+
+#global #content {
+  height:358px;
+  padding:5px;
+  background:#f0e7d4 url(me_bg.jpg) no-repeat center center;
+  text-align:center;
+  border:1px solid #222;
+  -moz-box-shadow:rgba(0,0,0,0.45) 0 1px 10px;
+  -webkit-box-shadow:rgba(0,0,0,0.45) 0 1px 10px;
+  box-shadow:rgba(0,0,0,0.45) 0 1px 10px;
+}
+
+#global #content p#job {
+  margin:0;
+}
+
+#global #content p#links {
+  margin:15px 0;
+}
+
+#global footer {
+  width:370px;
+  padding-top:5px;
+  color:#000;
+  font-size:14px;
+  text-shadow:rgba(255,255,255,0.15) 0 1px 1px;
+}
+
+#global footer a {
+  color:#112;
+}
+
+#global footer a:hover {
+  color:#113;
+}
