@@ -1,8 +1,8 @@
 html, body {
   font-family: "crimson-1","crimson-2",sans-serif;
   font-size:18px;
-  color:#232336;
-  text-shadow:rgba(255,255,255,0.55) 0 1px 0;
+  color:#999;
+  text-shadow:#333 1px 1px 0;
   text-align:center;
 }
 
@@ -18,23 +18,23 @@ h1 {
 }
 
 a {
-  color:#337;
+  color:#ccc;
   text-decoration:none;
 }
 
 a:hover {
-  color:#007;
+  color:#fff;
   text-decoration:none;
 }
 
 #global {
-  width:370px;
+  width:1115px;
   margin:50px auto;
 }
 
 #global #content {
   position:relative;
-  height:358px;
+  height:800px;
   padding:5px;
   background:#f0e7d4 url('me_bg.jpg') no-repeat center center;
   text-align:center;
@@ -45,36 +45,20 @@ a:hover {
 }
 
 #global #content .credits {
-  opacity:0;
   position:absolute;
   bottom:5px;
-  left:5px;
+  right:5px;
   font-size:12px;
-  color:#555;
+  color:#666;
   text-shadow:none;
-  -webkit-transition: opacity 1s ease-out;
-  -moz-transition: opacity 1s ease-out;
-  -o-transition: opacity 1s ease-out;
-  -ms-transition: opacity 1s ease-out;
-  transition: opacity 1s ease-out;
-}
-
-#global #content:hover .credits {
-  opacity:1;
-  -webkit-transition: opacity 0.3s ease-in;
-  -moz-transition: opacity 0.3s ease-in;
-  -o-transition: opacity 0.3s ease-in;
-  -ms-transition: opacity 0.3s ease-in;
-  transition: opacity 0.3s ease-in;
-  -webkit-transform: translateZ(0);
 }
 
 #global #content .credits a {
-  color:#444;
+  color:#999;
 }
 
 #global #content .credits a:hover {
-  color:#333;
+  color:#ccc;
 }
 
 #global #content p#job {
@@ -86,7 +70,7 @@ a:hover {
 }
 
 #global footer {
-  width:370px;
+  width:1115px;
   padding-top:5px;
   color:#000;
   font-size:14px;
