@@ -1,7 +1,7 @@
 html, body {
-  font-family: "crimson-1","crimson-2",sans-serif;
+  font-family:'crimson-1','crimson-2',sans-serif;
   font-size:18px;
-  color:#999;
+  color:#ccc;
   text-shadow:#333 1px 1px 0;
   text-align:center;
 }
@@ -15,10 +15,11 @@ h1 {
   font-weight:200;
   font-size:35px;
   letter-spacing:-1px;
+  color:#fff;
 }
 
 a {
-  color:#ccc;
+  color:#ddd;
   text-decoration:none;
 }
 
