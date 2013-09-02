@@ -29,59 +29,55 @@ a:hover {
 }
 
 #global {
-  width:1115px;
-  margin:50px auto;
+  margin:30px auto;
 }
 
-#global #content {
-  position:relative;
-  height:800px;
+#content {
   padding:5px;
-  background:#f0e7d4 url('me_bg.jpg') no-repeat center center;
   text-align:center;
-  border:1px solid #222;
-  -moz-box-shadow:rgba(0,0,0,0.45) 0 1px 10px;
-  -webkit-box-shadow:rgba(0,0,0,0.45) 0 1px 10px;
-  box-shadow:rgba(0,0,0,0.45) 0 1px 10px;
 }
 
-#global #content .credits {
-  position:absolute;
-  bottom:5px;
-  right:5px;
-  font-size:12px;
-  color:#666;
-  text-shadow:none;
-}
-
-#global #content .credits a {
-  color:#999;
-}
-
-#global #content .credits a:hover {
-  color:#ccc;
-}
-
-#global #content p#job {
+#content #job {
   margin:0;
 }
 
-#global #content p#links {
+#content #links {
   margin:15px 0;
 }
 
-#global footer {
-  width:1115px;
-  padding-top:5px;
+footer {
+  position:absolute;
+  bottom:5px;
+  width:100%;
   color:#000;
-  font-size:14px;
+  font-size:12px;
   text-shadow:rgba(255,255,255,0.15) 0 1px 1px;
 }
 
-#global footer a {
+footer .copyright {
+  color:#000;
+  text-shadow:rgba(255,255,255,0.15) 0 1px 1px;
+}
+
+footer .credits {
+  position:absolute;
+  right:15px;
+  color:#666;
+  text-shadow:rgba(0,0,0,0.15) 0 1px 1px;
+}
+
+footer .credits a {
+  color:#999;
+}
+
+footer .credits a:hover {
+  color:#ccc;
+}
+
+footer a {
   color:#112;
 }
 
-#global footer a:hover {
+footer a:hover {
   color:#113;
 }

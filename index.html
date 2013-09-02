@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Rémy Coutable</title>
+    <title>Rémy Coutable – Web developer</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="keywords" content="Rémy Coutable,rymai,rails,ruby,jilion,sublimevideo,twitter,github,lausanne,switzerland,france" />
     <meta name="robots" content="all" />
@@ -15,15 +15,28 @@
     <div id="global">
       <div id="content">
         <h1>Rémy Coutable</h1>
-        <p id="job">Web engineer at <a href="http://jilion.com">Jilion</a>.</p>
+        <p id="job">Web developer at <a href="http://jilion.com">Jilion</a>.</p>
         <p id="links">
           <a href="https://github.com/rymai">GitHub</a> – <a href="https://twitter.com/rymai">Twitter</a> – <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#114;&#101;&#109;&#121;&#64;&#114;&#121;&#109;&#97;&#105;&#46;&#109;&#101;">Email</a>
         </p>
-        <span class="credits">Photo by <a href="http://coiro.me">Andrea Coiro</a></span>
       </div>
-      <footer>Copyright © 1987-2013 Rémy Coutable</footer>
+      <footer>
+        <span class="copyright">Copyright © 1987-2013 Rémy Coutable</a></span>
+        <span class="credits">Photo by <a href="http://coiro.me">Andrea Coiro</a></span>
+      </footer>
     </div>
+
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
     <script type="text/javascript">
+      $(function() {
+        $(window).resize(function() {
+          if($(this).width() >= 767) {
+            $.backstretch("me_bg.jpg", { fade: 50 });
+          }
+        }).resize(); // trigger resize on page load
+      });
+
       var _gaq = _gaq || [];
       var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
       _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
