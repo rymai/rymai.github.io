@@ -74,6 +74,34 @@ footer .credits a:hover {
   color:#ccc;
 }
 
+@media (max-width: 450px) {
+  html, body {
+    font-size:14px;
+  }
+
+  h1 {
+    font-size:28px;
+  }
+
+  #global {
+    margin:10px auto;
+  }
+}
+
+@media (max-width: 650px) {
+  footer .copyright {
+    position:relative;
+    float:left;
+    margin-right:10px;
+  }
+
+  footer .copyright, footer .credits {
+    position:relative;
+    float:left;
+    right:0;
+  }
+}
+
 footer a {
   color:#112;
 }
