@@ -1,7 +1,7 @@
 html, body {
   font-family:'crimson-1','crimson-2',sans-serif;
   font-size:18px;
-  color:#ccc;
+  color:#fff;
   text-shadow:#333 1px 1px 0;
   text-align:center;
 }
@@ -13,18 +13,24 @@ body {
 h1 {
   margin:0;
   font-weight:200;
-  font-size:35px;
+  font-size:1.9em;
   letter-spacing:-1px;
-  color:#fff;
+}
+
+h2 {
+  margin-top:5px;
+  font-weight:200;
+  font-size:1.2em;
 }
 
 a {
-  color:#ddd;
+  color:#fff;
+  font-style:oblique;
   text-decoration:none;
 }
 
 a:hover {
-  color:#fff;
+  color:#ccc;
   text-decoration:none;
 }
 
@@ -33,45 +39,35 @@ a:hover {
 }
 
 #content {
+  width:300px;
+  margin:auto;
   padding:5px;
-  text-align:center;
-}
-
-#content #job {
-  margin:0;
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  border-radius:10px;
+  background-color:rgba(0,0,0,0.35);
 }
 
 #content #links {
-  margin:15px 0;
+  margin:10px 0 4px 0;
 }
 
 footer {
   position:absolute;
   bottom:5px;
   width:100%;
-  color:#000;
-  font-size:12px;
+  font-size:0.65em;
   text-shadow:rgba(255,255,255,0.15) 0 1px 1px;
 }
 
 footer .copyright {
-  color:#000;
-  text-shadow:rgba(255,255,255,0.15) 0 1px 1px;
-}
-
-footer .credits {
-  position:absolute;
-  right:80px;
-  color:#666;
-  text-shadow:rgba(0,0,0,0.15) 0 1px 1px;
-}
-
-footer .credits a {
-  color:#999;
-}
-
-footer .credits a:hover {
-  color:#ccc;
+  width:230px;
+  margin:auto;
+  padding:5px;
+  -webkit-border-radius:8px;
+  -moz-border-radius:8px;
+  border-radius:8px;
+  background-color:rgba(0,0,0,0.25);
 }
 
 @media (max-width: 450px) {
@@ -79,33 +75,15 @@ footer .credits a:hover {
     font-size:14px;
   }
 
-  h1 {
-    font-size:28px;
+  footer {
+    font-size:0.8em;
+  }
+
+  footer .copyright {
+    width:200px;
   }
 
   #global {
     margin:10px auto;
   }
-}
-
-@media (max-width: 650px) {
-  footer .copyright {
-    position:relative;
-    float:left;
-    margin-right:10px;
-  }
-
-  footer .copyright, footer .credits {
-    position:relative;
-    float:left;
-    right:0;
-  }
-}
-
-footer a {
-  color:#112;
-}
-
-footer a:hover {
-  color:#113;
 }
