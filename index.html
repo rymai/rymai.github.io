@@ -5,9 +5,9 @@
     <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
     <meta name='keywords' content='Rémy Coutable,rymai,ruby,rails,jilion,sublimevideo,github,lausanne,switzerland,france' />
     <meta name='robots' content='all' />
-    <link href='ios_icon.png' rel='apple-touch-icon' />
-    <link href='favicon.ico' rel='shortcut icon' type='image/x-icon' />
-    <link href='style.css' media='screen' rel='stylesheet' type='text/css' />
+    <link href='http://dntzf7ohtlsw4.cloudfront.net/ios_icon.png' rel='apple-touch-icon' />
+    <link href='http://dntzf7ohtlsw4.cloudfront.net/favicon.ico' rel='shortcut icon' type='image/x-icon' />
+    <link href='http://dntzf7ohtlsw4.cloudfront.net/style.css' media='screen' rel='stylesheet' type='text/css' />
     <script src='http://use.typekit.com/pih1cyo.js' type='text/javascript'></script>
     <script type='text/javascript'>try{Typekit.load();}catch(e){}</script>
     <script>
@@ -41,7 +41,7 @@
         var backgroundImage = 'images/background/bg_' + Math.round(Math.random() * 18 + 1) + '.jpg';
         $(window).resize(function() {
           if($(this).width() >= 320) {
-            $.backstretch(backgroundImage, { fade: 50 });
+            $.backstretch('http://dntzf7ohtlsw4.cloudfront.net/' + backgroundImage, { fade: 50 });
           }
         }).resize(); // trigger resize on page load
       });
