@@ -39,7 +39,6 @@
     <script type='text/javascript'>
       $(function() {
         var backgroundImage = 'images/background/bg_' + Math.round(Math.random() * 18 + 1) + '.jpg';
-        console.info(backgroundImage);
         $(window).resize(function() {
           if($(this).width() >= 320) {
             $.backstretch(backgroundImage, { fade: 50 });
