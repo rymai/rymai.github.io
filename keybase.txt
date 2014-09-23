@@ -1,0 +1,66 @@
+==================================================================
+https://keybase.io/rymai
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://www.rymai.me
+  * I am rymai (https://keybase.io/rymai) on keybase.
+  * I have a public key with fingerprint 2056 CEB5 6891 EFA6 5BE0  DF59 46DF 07E5 CD9E 96AB
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "2056ceb56891efa65be0df5946df07e5cd9e96ab",
+            "host": "keybase.io",
+            "key_id": "46df07e5cd9e96ab",
+            "uid": "809ae94a72d1d305a9e470e887722100",
+            "username": "rymai"
+        },
+        "service": {
+            "hostname": "www.rymai.me",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1411501836,
+    "expire_in": 157680000,
+    "prev": "be3f9dfdfc226a3e3af8461c12934105d135758342ad21e8f994ec730d42e16b",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v1.0.5
+Comment: https://keybase.io/crypto
+
+yMHjAnicbZFbSBRhFMd33UxbtXzwQpAPjuBDLTb3y/pWEdaDZHdKWebyjQ6uM9vM
+7Kqsa6ZpsBsipYF5I0rB7EHKCA1Ju7NWKwo9VHghVpTEEMPH6pvF3vpePs7//M7/
+nO87rzMcNqf9+GJK/GP/nRH7zNSG33Y2P5YeRARNqkfcQaQaJC5ZUSuB7tMV1UTc
+CI5StAgEimY5DMg8TQkAlWSKI2lJRhlAiRIHOJoXEBdSpRlWBbQReAMUKRrUYOBR
+JKj+h/cnEizK8YAjeQaXMIlAKZ4DJIMClmUYHMdQ1AINoKt8DYC0Xl/DK0jIhUAp
+oIjAGtjqu5Oura0tSiBFMHQhPl0zNVHzwkyVafrcVqFZ70uQQPDseHgERZXgo2FB
+AOiGoqmIG4OkaCqWKUZiGIViLEG7EFDnU3TgUSyCYmgWhcdqAwLQUgCEzEmyJIs4
+TvMEIHiZJWlMxHCOIDGUkjCCYiiWIHFewjHAyhxHApEhUInEAUZbX2KAK6qGuEk4
+Jl8JLQ2lUuVNvw6Q0Mup8l02u9O2OznJWpvNuSfz3zK34im/ix192QM344HUY4cn
+fqaZ+W2mY+CU8nC0pDdr7UXFfvb5reTC0syhUOH73OzHQW/J9oP5R2FnJEfYLKvr
+bDLehiN9kxtqu/3LWNtkNNztaVr15s0cnV30cyPk8GCUbViW8eD6rDb3ffxqQWT9
+Wtpg+eUfmY3Xoxczln1V1XO2Tx0LKzeO4F1Gdet80qt9TkfPu5g5XpZc8SePag2d
+939eahkpGF9t3vaWFvfQl8q7L5zYHHuae+/N7aGGZy2F/fjprF7fyYOdzWlqcGYp
+5W7XtJyTOhjuGHiy9/5E+6GVrbW2zQPexumvZ35F68iC5djCufjotw02ksfG0oc/
+/AVOaBaG
+=Hy8o
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/rymai
+
+==================================================================
+
