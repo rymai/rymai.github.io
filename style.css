@@ -70,20 +70,29 @@ footer .copyright {
   background-color:rgba(0,0,0,0.25);
 }
 
-@media (max-width: 450px) {
-  html, body {
-    font-size:14px;
+@media (max-width: 600px) {
+  h1 {
+    font-size:2.5em;
+    letter-spacing:-1px;
   }
 
-  footer {
-    font-size:0.8em;
-  }
-
-  footer .copyright {
-    width:200px;
+  h2 {
+    font-size:1.8em;
   }
 
   #global {
-    margin:10px auto;
+    margin:80px auto;
+  }
+
+  #content {
+    width:80%;
+  }
+
+  footer {
+    font-size:1em;
+  }
+
+  footer .copyright {
+    width:220px;
   }
 }
