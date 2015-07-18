@@ -90,8 +90,8 @@ body > header h1, body > header nav {
   display: inline-block;
 }
 
-header .unit {
-  height: 121px;
+header {
+  height: 150px;
 }
 
 nav ul {
@@ -104,7 +104,7 @@ nav li {
 }
 
 .main-nav {
-  margin-top: $header-font-size + 15;
+  margin-top: $header-font-size + 7;
 }
 
 .main-nav li {
