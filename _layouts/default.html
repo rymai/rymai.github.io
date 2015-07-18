@@ -1,0 +1,24 @@
+{% include top.html %}
+  <body class="wrap">
+    {% include header.html %}
+
+    <section class="news">
+      <div class="grid">
+
+        {% include sidebar-mobile.html %}
+
+        <div class="unit four-fifths">
+          {{ content }}
+        </div>
+
+        {% include sidebar.html %}
+
+        <div class="clear"></div>
+
+      </div>
+    </section>
+
+    {% include footer.html %}
+    {% include analytics.html %}
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<article>
+  <h2>
+    <a href="{{ page.url }}" class="permalink" title="Permalink">
+      {{ page.title }}
+    </a>
+  </h2>
+  <div class="post-meta">
+    <span class="post-date">{{ page.date | date_to_long_string }}</span>
+    –
+    <span class="post-words">
+      {{ page.content | number_of_words }} words
+    </span>
+    about
+    <span class="post-category">
+      {% for category in page.categories %}
+        <a href="/{{ category }}"><span class="label">{{ category }}</span></a>
+      {% endfor %}
+    </span>
+  </div>
+  <div class="post-content">
+    {% if include.context == 'home' %}
+      {{ page.excerpt | markdownify }}
+    {% else %}
+      {{ page.content | markdownify }}
+
+      <footer>
+      {% if page.categories contains 'french' %}
+        <p>Vous voulez réagir à cet article ? Dites le à <a href="https://twitter.com/intent/tweet?text=@{{ page.author }} &url={{ site.root_url }}{{ page.url }}">@{{ page.author }}</a> sur Twitter.</p>
+        <p><em>Vous avez trouvé une faute ? Ouvrez une <a href="{{ site.repository_url }}/edit/master/_posts{{ page.url }}.md">pull-request</a>!</em></p>
+      {% else %}
+        <p>Have feedback on this post? Let <a href="https://twitter.com/intent/tweet?text=@{{ page.author }} &url={{ site.root_url }}{{ page.url }}">@{{ page.author }}</a> know on Twitter.</p>
+        <p><em>Found a typo? Open a <a href="{{ site.repository_url }}/edit/master/_posts{{ page.url }}.md">pull-request</a>!</em></p>
+      {% endif %}
+      </footer>
+    {% endif %}
+  </div>
+</article>

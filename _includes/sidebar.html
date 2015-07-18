@@ -1,0 +1,30 @@
+<div class="unit one-fifth hide-on-mobiles">
+  <aside>
+    <h4>Categories</h4>
+    <ul>
+      <li class="{% if page.url contains '/archives/' %}current{% endif %}">
+        <a href="/archives">#all</a>
+      </li>
+      <li class="{% if page.url contains '/english/' %}current{% endif %}">
+        <a href="/english">#english</a>
+      </li>
+      <li class="{% if page.url contains '/french/' %}current{% endif %}">
+        <a href="/french">#french</a>
+      </li>
+      <li class="{% if page.url contains '/code/' %}current{% endif %}">
+        <a href="/code">#code</a>
+      </li>
+      <li class="{% if page.url contains '/thoughts/' %}current{% endif %}">
+        <a href="/thoughts">#thoughts</a>
+      </li>
+    </ul>
+    <!-- <h4>Latest posts</h4>
+    <ul>
+      {% for post in site.posts limit:5 %}
+      <li class="{% if page.title == post.title %}current{% endif %}">
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
+    </ul> -->
+  </aside>
+</div>

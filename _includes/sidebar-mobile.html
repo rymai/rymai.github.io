@@ -1,0 +1,18 @@
+<div class="docs-nav-mobile unit whole show-on-mobiles">
+  <select onchange="if (this.value) window.location.href=this.value">
+    <option value="">Navigate the blog…</option>
+    <option value="/">Home</option>
+    <optgroup label="Categories">
+      <option value="/archives">#all</option>
+      <option value="/english">#english</option>
+      <option value="/french">#french</option>
+      <option value="/thoughts">#thoughts</option>
+      <option value="/guard">#guard</option>
+    </optgroup>
+    <optgroup label="Latest posts">
+      {% for post in site.posts limit:5 %}
+        <option value="{{ post.url }}">{{ post.date | date_to_string }} - {{ post.title }}</option>
+      {% endfor %}
+    </optgroup>
+  </select>
+</div>
