@@ -26,10 +26,10 @@
       <footer>
       {% if page.categories contains 'french' %}
         <p>Vous voulez réagir à cet article ? Dites le à <a href="https://twitter.com/intent/tweet?text=@{{ page.author }} &url={{ site.root_url }}{{ page.url }}">@{{ page.author }}</a> sur Twitter.</p>
-        <p><em>Vous avez trouvé une faute ? Ouvrez une <a href="{{ site.github.repository_url }}/edit/master/_posts{{ page.url }}.md">pull-request</a>!</em></p>
+        <p><em>Vous avez trouvé une faute ? Ouvrez une <a href="{{ site.github.repository_url }}/edit/master/{{ page.path }}">pull-request</a>!</em></p>
       {% else %}
         <p>Have feedback on this post? Let <a href="https://twitter.com/intent/tweet?text=@{{ page.author }} &url={{ site.root_url }}{{ page.url }}">@{{ page.author }}</a> know on Twitter.</p>
-        <p><em>Found a typo? Open a <a href="{{ site.github.repository_url }}/edit/master/_posts{{ page.url }}.md">pull-request</a>!</em></p>
+        <p><em>Found a typo? Open a <a href="{{ site.github.repository_url }}/edit/master/{{ page.path }}">pull-request</a>!</em></p>
       {% endif %}
       </footer>
     {% endif %}
