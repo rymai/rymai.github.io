@@ -3,13 +3,9 @@ layout: default
 title: Home
 ---
 
-<div id="home">
-  <ul class="posts">
-    {% for page in paginator.posts %}
-      {% include post-content.html context='home' %}
-    {% endfor %}
-  </ul>
-</div>
+{% for page in paginator.posts %}
+  {% include post-content.html context='home' %}
+{% endfor %}
 
 {% if paginator.total_pages > 1 %}
   <div class="pagination">

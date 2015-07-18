@@ -1,5 +1,5 @@
-<div id="{{ include.name }}">
-  <h2>{{ page.title }}</h2>
+<div id="{{ include.name }}" class="archives">
+  <h2><a href="/{{ include.name }}">{{ page.title }}</a></h2>
   <ul class="posts">
     {% for post in site.posts %}
       {% if post.categories contains include.name or include.name == 'archives' %}

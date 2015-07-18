@@ -1,9 +1,9 @@
 ---
-layout: page
+layout: about
 title: About
 ---
 
-<a href="/images/remy-skate-github.jpg" target="_blank"><img class="about-pic" alt="Rémy, not working" src="/images/remy-skate-github.jpg" /></a>
+## I am Rémy Coutable
 
 I am a sporty geek.
 

@@ -2,19 +2,17 @@
   <body class="wrap">
     {% include header.html %}
 
-    <section class="news">
+    <section class="content">
+      {% include sidebar-mobile.html %}
+
       <div class="grid">
-
-        {% include sidebar-mobile.html %}
-
-        <div class="unit four-fifths">
+        <div class="unit three-fifths center-on-mobiles">
           {{ content }}
         </div>
 
         {% include sidebar.html %}
 
         <div class="clear"></div>
-
       </div>
     </section>
 

@@ -1,13 +1,12 @@
-<div class="docs-nav-mobile unit whole show-on-mobiles">
+<div class="mobile-sidebar unit whole show-on-mobiles">
   <select onchange="if (this.value) window.location.href=this.value">
-    <option value="">Navigate the blog…</option>
-    <option value="/">Home</option>
+    <option value="/archives">More posts…</option>
     <optgroup label="Categories">
       <option value="/archives">#all</option>
       <option value="/english">#english</option>
       <option value="/french">#french</option>
+      <option value="/code">#code</option>
       <option value="/thoughts">#thoughts</option>
-      <option value="/guard">#guard</option>
     </optgroup>
     <optgroup label="Latest posts">
       {% for post in site.posts limit:5 %}

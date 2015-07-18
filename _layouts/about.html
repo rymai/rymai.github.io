@@ -2,12 +2,16 @@
   <body class="wrap">
     {% include header.html %}
 
-    <section class="news">
+    <section class="content">
       <div class="grid">
 
-        <div class="unit five-fifths">
-          {{ content }}
+        <div class="unit three-fifths">
+          <article>{{ content }}</article>
         </div>
+
+        <div class="unit two-fifths about-pic"></div>
+
+        <div class="clear"></div>
 
       </div>
     </section>
