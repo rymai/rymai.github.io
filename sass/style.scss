@@ -405,7 +405,11 @@ aside li.current a:before {
 // Mobile sidebar
 
 .mobile-sidebar {
-  margin-top: 20px;
+  margin: 20px 10%;
+}
+
+.mobile-sidebar select {
+  width: 100%;
 }
 
 // HTML Elements

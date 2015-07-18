@@ -248,7 +248,10 @@ aside li.current a:before {
   content: "» "; }
 
 .mobile-sidebar {
-  margin-top: 20px; }
+  margin: 20px 10%; }
+
+.mobile-sidebar select {
+  width: 100%; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
