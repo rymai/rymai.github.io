@@ -77,9 +77,10 @@ nav li {
   float: left;
   width: 100%;
   padding: 5px;
+  margin-bottom: 20px;
   text-align: center;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 25px;
   font-weight: 800; }
 
 .mobile-nav .current a {
@@ -250,7 +251,7 @@ aside li.current a:before {
   content: "» "; }
 
 .mobile-sidebar {
-  margin: 0 35px; }
+  margin-top: 20px; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;

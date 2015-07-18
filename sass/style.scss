@@ -28,12 +28,13 @@ $link-color:       #000;
 $link-color-hover: #f37606;
 $link-color-alt:   #222;
 
-$font-size:         17px;
-$font-size-small:   15px;
-$font-size-smaller: 13px;
-$font-size-tiny:    12px;
-$header-font-size:  48px;
-$nav-font-size:     20px;
+$font-size:            17px;
+$font-size-small:      15px;
+$font-size-smaller:    13px;
+$font-size-tiny:       12px;
+$header-font-size:     48px;
+$nav-font-size:        20px;
+$nav-font-size-mobile: 25px;
 
 $tiny-screen-size:   480px;
 $small-screen-size:  568px;
@@ -117,6 +118,7 @@ nav li {
   text-transform: uppercase;
 
   font-size: $nav-font-size;
+
   font-weight: 800;
 
   @include transition (all .25s);
@@ -141,11 +143,12 @@ nav li {
 
   width: 100%;
   padding: 5px;
+  margin-bottom: 20px;
 
   text-align: center;
   text-transform: uppercase;
 
-  font-size: 14px;
+  font-size: $nav-font-size-mobile;
   font-weight: 800;
 }
 
@@ -406,7 +409,7 @@ aside li.current a:before {
 // Mobile sidebar
 
 .mobile-sidebar {
-  margin: 0 35px;
+  margin-top: 20px;
 }
 
 // HTML Elements
