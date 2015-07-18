@@ -294,6 +294,10 @@ h5, h6 {
 article .post-content {
   text-align: justify; }
 
+article .post-content footer {
+  border-top: 1px solid #BBB;
+  font-size: smaller; }
+
 article ul li p {
   margin: 0; }
 

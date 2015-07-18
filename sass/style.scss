@@ -34,8 +34,6 @@ $font-size-small:   15px;
 $font-size-smaller: 13px;
 $font-size-tiny:    12px;
 
-$post-content-font-stack: "calluna-1","calluna-2",serif;
-
 // Base
 
 * {
@@ -408,6 +406,11 @@ h5, h6 {
 article .post-content {
   text-align: justify;
   // font-family: $post-content-font-stack;
+}
+
+article .post-content footer {
+  border-top: 1px solid #BBB;
+  font-size: smaller;
 }
 
 article ul li p {
