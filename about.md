@@ -1,6 +1,7 @@
 ---
 layout: about
 title: About
+permalink: about/
 ---
 
 ## I am Rémy Coutable
