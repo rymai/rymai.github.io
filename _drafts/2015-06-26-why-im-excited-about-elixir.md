@@ -3,22 +3,122 @@ title:  "Why I'm excited about Elixir"
 categories: english code
 ---
 
-For many years I've been a proficient Rubyist, working with Ruby [day](http://www.sublimevideo.net) and [night](https://github.com/guard). For 1 year and a half now I'm [working with PHP](https://www.dailymotion.com). PHP was actually my first web programming language, back in 2004. I'm ok to work with PHP but I really miss the excitment of using a more developer friendly language like Ruby.
+For more than five years I've been a proficient Rubyist, working with [Ruby](http://www.ruby-lang.org/) [day](http://www.sublimevideo.net) and [night](https://github.com/guard). For one year and a half now I'm [working with PHP](https://www.dailymotion.com). PHP was actually my first Web programming language, back in 2004. I'm ok to work with PHP but I really miss the excitment of using a more developer-friendly language like Ruby.
 
-However, at the same time I want to explore new things –like functional programming, or event-driven programming to name a few– and I feel like there's new kids on the block. I want to embrace the evolution of the server-side web because I don't want to be stuck in a Java (or PHP!) job in 10 years...
+### Exploring new horizons
 
-Last year I worked for 6 months on a [Node.js](https://nodejs.org) project (that was not deployed in production for various reasons). That was a great experience but the paradigm of thinking asynchronously, even using promises (I started with good old callbacks) is kind of fucked-up in my opinion. There should be a better way.
+The good side of not working with Ruby anymore is that I'm opening to new languages: [Go](http://golang.org/), [Rust](http://www.rust-lang.org/) and [Elixir](http://elixir-lang.org/).
 
-Enter [Elixir](http://elixir-lang.org), here's its synopsis:
+I've followed their "Getting started" guides but the one that draw my attention the most was Elixir!
+
+### A promising tag line
+
+I must admit I first heard of Elixir from [José Valim](https://github.com/josevalim), which is [a much respected guy](http://plataformatec.com.br/) in the Ruby community. I think he started Elixir as a pure experiment and it ended-up being, in my opinion, one of the best contender for the next-decade server-side programming languages.
 
 > Elixir is a dynamic, functional language designed for building scalable and maintainable applications.
->
-> Elixir leverages the Erlang VM, known for running low-latency, distributed and fault-tolerant systems, while also being successfully used in web development and the embedded software domain.
 
-I must admit I first heard of Elixir from [José Valim](https://github.com/josevalim), which is a much respected guy in the Ruby community. I think he started Elixir as a pure experiment and it ended-up being –in my opinion– one of the best contender for the next-decade server-side programming languages.
+With Elixir, I will be able to:
 
-What drives my curiosity the most is that its a functional language. These days I hear a lot about functional languages so I want to try one myself.
+- still enjoy a dynamic language, with a Ruby-like syntax, as a bonus;
+- embrace functional programming, which is a new paradigm for me;
+- build scalable and maintainable applications.
 
-Also, I really like the *low-latency* part. I've done this [great Elixir & Phoenix tutorial](http://phoenix.thefirehoseproject.com/) (Pheonix is an Elixir web framework, think of it as the Rails of Ruby), and I must admit I was impressed by the page load speed. Of course, it's not a real project blabla but still if you compare it to a similar tutorial in Rails, you can feel the speed.
+### A dynamic and elegant language
 
-To be continued...
+Elixir leverages the Erlang VM and its performance but without the [weird syntax](http://damienkatz.net/2008/03/what_sucks_abou.html).
+Even better, it has a nice syntax, quite similar to Ruby's one!
+I must admit, this is very important to me (and to every Rubyists, really)!
+
+### A functional language
+
+I've always thought [object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming) was *the only right way* to code. Seeing that Elixir is a [functional programming language](https://en.wikipedia.org/wiki/Functional_programming) made me change my mind about that.
+
+Functional programming has many benefits, but the ones that interest me the most are the facts that it avoids changing-state and mutable data. This leads to removing side effects, which is a huge relief!
+
+#### Pattern matching
+
+One thing I already love is pattern matching. It allows destructuring and is a common pattern in Elixir:
+
+```elixir
+case File.read "hello" do
+  {:ok, body}      -> IO.puts "Success: #{body}"
+  {:error, reason} -> IO.puts "Error: #{reason}"
+end
+```
+
+Here, instead of `try/catch` the `File.read` call as we could do in other languages, we can simply define two clauses that would match the two possible outcomes of the function call.
+
+Another example is pattern matching used as filter in a [comprehension](http://elixir-lang.org/getting-started/comprehensions.html):
+
+```iex
+iex> values = [good: 1, good: 2, bad: 3, good: 4]
+iex> for {:good, n} <- values, do: n * n
+[1, 4, 16]
+```
+
+Here, for each tuple of `values` which match the pattern `{:good, n}`, we multiply `n` by itself.
+
+#### Processes
+
+Elixir is built on [processes](http://elixir-lang.org/getting-started/processes.html) which are extremely lightweight in terms of memory and CPU:
+
+> Processes are isolated from each other, run concurrent to one another and communicate via message passing. Processes are not only the basis for concurrency in Elixir, but they also provide the means for building distributed and fault-tolerant programs.
+
+And it's as simple as that:
+
+```elixir
+parent = self()
+
+# Spawns an Elixir process (not an operating system one!)
+spawn_link(fn ->
+  send parent, {:msg, "hello world"}
+end)
+
+# Block until the message is received
+receive do
+  {:msg, contents} -> IO.puts contents
+end
+```
+
+Note the `{:msg, contents}` pattern matching again!
+
+#### Module attributes
+
+Another interesting feature is modules attributes. Then can be used to document a module or function, but also to specify behaviours that a module implements (behaviours are similar to interfaces in object oriented languages), or even to store data during compilation!
+
+```elixir
+defmodule Math do
+  @moduledoc """
+  Provides math-related functions.
+
+  ## Examples
+
+      iex> Math.sum(1, 2)
+      3
+
+  """
+
+  @doc """
+  Calculates the sum of two numbers.
+  """
+  def sum(a, b), do: a + b
+end
+```
+
+### Scalability, maintainability
+
+Since Erlang was *conceived* with high availability and scalability in mind, Elixir which sits on top of it inherits (in a functional programming way of course ^^) Erlang's kick-ass performance!
+
+The guys at Oozou [wrote a great summary](http://blog.oozou.com/why-we-are-excited-about-elixir/) of some of the powerful features that makes Erlang (and Elixir) so great.
+
+### A cure for a great future
+
+Elixir has an awesome [Getting Started](http://elixir-lang.org/getting-started/introduction.html) guide to which I've [already](https://github.com/elixir-lang/elixir-lang.github.com/pull/576) [contributed](https://github.com/elixir-lang/elixir-lang.github.com/pull/577)! :D
+
+I think the next steps for me will be:
+
+- read the [Mix and OTP](http://elixir-lang.org/getting-started/mix-otp/introduction-to-mix.html) and [Meta-Programming in Elixir](http://elixir-lang.org/getting-started/meta/quote-and-unquote.html) guides;
+- dig into the [Phoenix Web framework](http://www.phoenixframework.org/);
+- start a real-life project using Elixir & Phoenix.
+
+What about you? What do you think of Elixir?
