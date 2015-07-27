@@ -1,17 +1,26 @@
 exclude: [CNAME, Gemfile, Gemfile.lock, Guardfile, README.md, sass]
+
 name: rymai.me
-permalink: /:year/:month/:day/:title/
-google_analytics_id: UA-34888761-1
+description: "Web development stuff in english, philosophy/lifestyle thoughts in french!"
+meta_description: "Web development stuff in english, philosophy/lifestyle thoughts in french!"
 root_url: http://www.rymai.me
-markdown: kramdown
-kramdown:
-  input: GFM
-# redcarpet:
-#   extensions: ['no_intra_emphasis', 'autolink', 'strikethrough', 'space_after_headers']
+permalink: /:year/:month/:day/:title/
+
+google_analytics_id: UA-34888761-1
+
 paginate: 5
 paginate_path: ':num'
+
+markdown: redcarpet
+highlighter: pygments
+# kramdown:
+#   input: GFM
+# redcarpet:
+#   extensions: ['no_intra_emphasis', 'autolink', 'strikethrough', 'space_after_headers']
+
 gems:
   - jekyll-sitemap
+
 defaults:
   -
     scope:
