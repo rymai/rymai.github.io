@@ -25,10 +25,10 @@
 
       <footer>
       {% if page.categories contains 'french' %}
-        <p><a href="https://twitter.com/intent/tweet?via={{ page.author }}&url={{ site.root_url }}{{ page.url }}" target="_blank">Partagez</a> ou <a href="https://twitter.com/intent/tweet?text=@{{ page.author }} &url={{ site.root_url }}{{ page.url }}" target="_blank">réagissez</a> sur Twitter.</p>
+        <p><a href='https://twitter.com/intent/tweet?text="{{ page.title }}"&via={{ page.author }}&url={{ site.root_url }}{{ page.url }}' target="_blank">Partagez</a> ou <a href="https://twitter.com/intent/tweet?text=@{{ page.author }} &url={{ site.root_url }}{{ page.url }}" target="_blank">réagissez</a> sur Twitter.</p>
         <p><em>Vous avez trouvé une faute ? Ouvrez une <a href="{{ site.github.repository_url }}/edit/master/{{ page.path }}" target="_blank">pull-request</a>!</em></p>
       {% else %}
-        <p><a href="https://twitter.com/intent/tweet?via={{ page.author }}&url={{ site.root_url }}{{ page.url }}" target="_blank">Share</a> or <a href="https://twitter.com/intent/tweet?text=@{{ page.author }} &url={{ site.root_url }}{{ page.url }}" target="_blank">react</a> on Twitter.</p>
+        <p><a href='https://twitter.com/intent/tweet?text="{{ page.title }}"&via={{ page.author }}&url={{ site.root_url }}{{ page.url }}' target="_blank">Share</a> or <a href="https://twitter.com/intent/tweet?text=@{{ page.author }} &url={{ site.root_url }}{{ page.url }}" target="_blank">react</a> on Twitter.</p>
         <p><em>Found a typo? Open a <a href="{{ site.github.repository_url }}/edit/master/{{ page.path }}" target="_blank">pull-request</a>!</em></p>
       {% endif %}
       </footer>
