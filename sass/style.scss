@@ -11,6 +11,7 @@ $header-font-stack:  "bree-serif", $georgia;
 $background-color:       #fff;
 $background-color-light: #eee;
 $background-color-dark:  #44281a;
+$background-color-code:  #fff8ed;
 
 $primary-color:      #666;
 $primary-color-dark: #333;
@@ -26,6 +27,8 @@ $warning-color-dark: #6f0d0d;
 
 $code-color-option: #50b600;
 $code-color-flag:   #049dce;
+
+$border-color-code: #f6e4cc;
 
 $link-color:       #000;
 $link-color-hover: #f37606;
@@ -232,19 +235,8 @@ body > footer a:hover img {
 }
 
 // Article
-
 article, aside {
   font-size: $font-size-small;
-}
-
-article > footer {
-  font-size: smaller;
-}
-
-@media (max-width: $tiny-screen-size){
-  article ul {
-    padding-left: 20px;
-  }
 }
 
 @media (max-width: $small-screen-size){
@@ -256,6 +248,16 @@ article > footer {
 @media (min-width: $medium-screen-size){
   article, aside {
     font-size: $font-size;
+  }
+}
+
+article > footer {
+  font-size: smaller;
+}
+
+@media (max-width: $tiny-screen-size){
+  article ul {
+    padding-left: 20px;
   }
 }
 
@@ -277,6 +279,17 @@ article h3 {
 
 article .post-content {
   text-align: justify;
+}
+
+article .post-content img {
+  margin: 15px;
+}
+
+@media (max-width: $tiny-screen-size){
+  article .post-content .left {
+    float: none;
+    text-align: center;
+  }
 }
 
 article .post-content footer {
@@ -346,23 +359,26 @@ pre, code {
   white-space: pre;
 
   font-family: Menlo, $monospace;
-  font-size: golden-ratio($font-size, -1);
-  line-height: 1.8em;
+  font-size: 0.9em;
+  line-height: 1.5em;
 }
 
-@media (min-width: $medium-screen-size){
-  pre, code {
-    font-size: $font-size-small;
-  }
+.highlight {
+  overflow: auto;
+
+  width: 100%;
+  padding: 15px 20px;
+}
+
+.highlight pre {
+  padding: 0;
 }
 
 .highlight, p > pre, p > code, p > nobr > code, li > code, h5 > code, .note > code {
   color: $primary-color-dark;
   border-radius: 5px;
-  background-color: $background-color;
-  box-shadow: inset 0 1px 10px rgba(0,0,0,.3),
-    0 1px 0 rgba(255,255,255,.1),
-    0 -1px 0 rgba(0,0,0,.5);
+  background-color: $background-color-code;
+  border: 1px solid $border-color-code;
 }
 
 .note code {
@@ -372,13 +388,6 @@ pre, code {
   background-color: rgba(0,0,0,0.2);
 
   font-size: 0.8em;
-}
-
-.highlight {
-  overflow: auto;
-
-  width: 100%;
-  padding: 10px 0;
 }
 
 // Right-side nav

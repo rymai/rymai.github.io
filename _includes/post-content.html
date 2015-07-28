@@ -6,14 +6,14 @@
   </h2>
   <div class="post-meta">
     <span class="post-date">{{ page.date | date_to_long_string }}</span>
-    –
+    <!-- –
     <span class="post-words">
       {{ page.content | number_of_words }} words
     </span>
-    about
+    about -->
     <span class="post-category">
       {% for category in page.categories %}
-        <a href="/{{ category }}"><span class="label">{{ category }}</span></a>
+        <a href="/{{ category }}"><span class="label">#{{ category }}</span></a>
       {% endfor %}
     </span>
   </div>
