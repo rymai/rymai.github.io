@@ -1,5 +1,5 @@
 ---
-title:  "Why I'm excited about Elixir"
+title:  "Why I am excited about Elixir"
 categories: english code
 ---
 
@@ -13,7 +13,11 @@ I've followed their "Getting started" guides but the one that draw my attention 
 
 ### A promising tag line
 
-I must admit I first heard of Elixir from [José Valim](https://github.com/josevalim), which is [a much respected guy](http://plataformatec.com.br/) in the Ruby community. I think he started Elixir as a pure experiment and it ended-up being, in my opinion, one of the best contender for the next-decade server-side programming languages.
+<div class="left">
+  <img class="left" src="https://upload.wikimedia.org/wikipedia/en/a/a4/Elixir_programming_language_logo.png" title="Elixir language logo" alt="Elixir language logo" />
+</div>
+
+I must admit I first heard of Elixir from [José Valim](https://github.com/josevalim), which is [a much respected guy](http://plataformatec.com.br/) in the Ruby community. He started Elixir as [an experiment](http://www.infoq.com/interviews/valim-elixir) and it's now one of the best general-purpose programming language, in my opinion.
 
 > Elixir is a dynamic, functional language designed for building scalable and maintainable applications.
 
@@ -25,9 +29,53 @@ With Elixir, I will be able to:
 
 ### A dynamic and elegant language
 
-Elixir leverages the Erlang VM and its performance but without the [weird syntax](http://damienkatz.net/2008/03/what_sucks_abou.html).
+Elixir leverages the [Erlang VM](http://www.erlang.org/) and its performance but without the [weird syntax](http://damienkatz.net/2008/03/what_sucks_abou.html).
 Even better, it has a nice syntax, quite similar to Ruby's one!
 I must admit, this is very important to me (and to every Rubyists, really)!
+
+Following are some examples of Elixir code.
+
+**Protocols are a mechanism to achieve polymorphism in Elixir:**
+
+```elixir
+# Note the special module attribute "@doc" here
+defprotocol Blank do
+  @doc "Returns true if data is considered blank/empty"
+  def blank?(data)
+end
+
+# Integers are never blank
+defimpl Blank, for: Integer do
+  def blank?(_), do: false
+end
+
+# Just empty list is blank
+defimpl Blank, for: List do
+  def blank?([]), do: true
+  def blank?(_),  do: false
+end
+```
+
+**Elixir has a nice interactive shell:**
+
+```iex
+# this is similar to Ruby's %w() syntax
+iex> ~s(this is a string with "double" quotes, not 'single' ones)
+"this is a string with \"double\" quotes, not 'single' ones"
+
+# this is similar to Ruby's %i() syntax
+iex> ~w(foo bar bat)a
+[:foo, :bar, :bat]
+```
+
+**An example that uses [the Ecto library](https://github.com/elixir-lang/ecto) which provides an elegant DSL for writing database queries:**
+
+```elixir
+query = from w in Weather,
+        where: w.prcp > 0,
+        where: w.temp < 20,
+        select: w
+```
 
 ### A functional language
 
@@ -46,7 +94,7 @@ case File.read "hello" do
 end
 ```
 
-Here, instead of `try/catch` the `File.read` call as we could do in other languages, we can simply define two clauses that would match the two possible outcomes of the function call.
+Here, instead of `try/catch` the `File.read` call as we could do in other languages (actually Elixir supports it too), we can simply define two clauses that would match the two possible outcomes of the function call.
 
 Another example is pattern matching used as filter in a [comprehension](http://elixir-lang.org/getting-started/comprehensions.html):
 
@@ -84,7 +132,7 @@ Note the `{:msg, contents}` pattern matching again!
 
 #### Module attributes
 
-Another interesting feature is modules attributes. Then can be used to document a module or function, but also to specify behaviours that a module implements (behaviours are similar to interfaces in object oriented languages), or even to store data during compilation!
+Another interesting feature is [module attributes](http://elixir-lang.org/getting-started/module-attributes.html). Then can be used to document a module or a function, but also to specify [behaviours](http://elixir-lang.org/getting-started/typespecs-and-behaviours.html#behaviours) that a module implements (behaviours are similar to interfaces in object oriented languages), or even [to store data](http://elixir-lang.org/getting-started/module-attributes.html#as-temporary-storage) during compilation!
 
 ```elixir
 defmodule Math do
@@ -113,12 +161,14 @@ The guys at Oozou [wrote a great summary](http://blog.oozou.com/why-we-are-excit
 
 ### A cure for a great future
 
-Elixir has an awesome [Getting Started](http://elixir-lang.org/getting-started/introduction.html) guide to which I've [already](https://github.com/elixir-lang/elixir-lang.github.com/pull/576) [contributed](https://github.com/elixir-lang/elixir-lang.github.com/pull/577)! :D
+Elixir has an awesome [Getting Started](http://elixir-lang.org/getting-started/introduction.html) guide and I couldn't recommend you enough to follow it.
 
-I think the next steps for me will be:
+I think the next steps in my Elixir journey will be:
 
 - read the [Mix and OTP](http://elixir-lang.org/getting-started/mix-otp/introduction-to-mix.html) and [Meta-Programming in Elixir](http://elixir-lang.org/getting-started/meta/quote-and-unquote.html) guides;
-- dig into the [Phoenix Web framework](http://www.phoenixframework.org/);
-- start a real-life project using Elixir & Phoenix.
+- dig into [Phoenix](http://www.phoenixframework.org/), a productive, reliable and fast Web framework written in Elixir;
+- start a real project using Elixir and Phoenix.
 
 What about you? What do you think of Elixir?
+
+<small>Special thanks to [Macha](http://www.machada.fr) for reviewing and helping me improving this blog post!</small>
