@@ -20,6 +20,7 @@ highlighter: pygments
 
 gems:
   - jekyll-sitemap
+  - jekyll-feed
 
 defaults:
   -
