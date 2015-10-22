@@ -2,8 +2,11 @@
   <aside>
     <h2><a href="/archives">More posts...</a></h2>
     <ul>
-      <li class="{% if page.url contains '/archives/' %}current{% endif %}">
-        <a href="/archives">#all</a>
+      <li class="{% if page.url contains '/elixir/' %}current{% endif %}">
+        <a href="/elixir">#elixir</a>
+      </li>
+      <li class="{% if page.url contains '/thoughts/' %}current{% endif %}">
+        <a href="/thoughts">#thoughts</a>
       </li>
       <li class="{% if page.url contains '/english/' %}current{% endif %}">
         <a href="/english">#english</a>
@@ -11,11 +14,8 @@
       <li class="{% if page.url contains '/french/' %}current{% endif %}">
         <a href="/french">#french</a>
       </li>
-      <li class="{% if page.url contains '/code/' %}current{% endif %}">
-        <a href="/code">#code</a>
-      </li>
-      <li class="{% if page.url contains '/thoughts/' %}current{% endif %}">
-        <a href="/thoughts">#thoughts</a>
+      <li class="{% if page.url contains '/archives/' %}current{% endif %}">
+        <a href="/archives">#all</a>
       </li>
     </ul>
     <!-- <h4>Latest posts</h4>

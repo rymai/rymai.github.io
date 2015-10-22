@@ -1,6 +1,6 @@
 ---
-title:  "Why I am excited about Elixir"
-categories: english code
+title: "Why I am excited about Elixir"
+categories: english elixir
 ---
 
 For more than five years I've been a proficient Rubyist, working with [Ruby](http://www.ruby-lang.org/) [day](http://www.sublimevideo.net) and [night](https://github.com/guard). For one year and a half now I'm [working with PHP](https://www.dailymotion.com). PHP was actually my first Web programming language, back in 2004. I'm ok to work with PHP but I really miss the excitment of using a more developer-friendly language like Ruby.

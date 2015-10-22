@@ -1,5 +1,5 @@
 ---
-title:  "Mes préceptes philosophiques"
+title: "Mes préceptes philosophiques"
 categories: french thoughts
 ---
 
