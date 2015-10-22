@@ -7,9 +7,7 @@ Last weekend, [Macha](http://www.machada.fr) and I had a new project idea that w
 
 ### Forewords
 
-[Phoenix](http://www.phoenixframework.org) is a [Ruby on Rails](http://rubyonrails.org/)-like web framework written in [Elixir](http://elixir-lang.org/). Since I'm very familiar with Rails, this reduce the learning curve a bit...
-
-I'm using Phoenix **v1.0.3** in the rest of the article.
+[Phoenix](http://www.phoenixframework.org) is a [Ruby on Rails](http://rubyonrails.org/)-like web framework written in [Elixir](http://elixir-lang.org/). I'm using Phoenix **v1.0.3** in the rest of the article.
 
 Here are the steps we will follow to scaffold our new Phoenix application:
 
