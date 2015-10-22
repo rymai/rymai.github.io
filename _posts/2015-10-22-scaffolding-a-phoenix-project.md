@@ -3,7 +3,7 @@ title: "Scaffolding a Phoenix project"
 categories: english elixir
 ---
 
-Last weekend, [Macha](http://www.machada.fr) and I had a new project idea that will need an API server be used by an Android app (to begin with). Since I'm [very excited about Elixir and Phoenix](/2015-07-28-why-i-am-excited-about-elixir) these days, that's the perfect occasion to start a new [Phoenix](http://www.phoenixframework.org) project!
+Last weekend, [Macha](http://www.machada.fr) and I had a new project idea that will need an API server used by an Android app (to begin with). Since I'm [very excited about Elixir and Phoenix](/2015-07-28-why-i-am-excited-about-elixir) these days, that's the perfect occasion to start a new [Phoenix](http://www.phoenixframework.org) project!
 
 ### Forewords
 
