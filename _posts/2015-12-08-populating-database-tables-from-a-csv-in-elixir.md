@@ -113,21 +113,9 @@ defp _process_commune(commune_params) do
   if Enum.member?(_get_processed(:communes), commune_params[:name]) do
     IO.puts "Commune '#{commune_params[:name]}' already processed"
   else
-    commune = Repo.get_by(Commune, commune_code: commune_params[:commune_code])
+    commune = Repo.get_by(Commune, commune_code: commune_params[:commune_code]) || %Comune{}
     commune_changeset = _changeset(Commune, commune, commune_params)
-
-    if commune do
-      if commune.name == commune_params[:name] && commune.department_id == commune_params[:department_id] do
-        IO.puts "Commune '#{commune.name}' is ok"
-      else
-        Repo.update!(commune_changeset)
-        IO.puts "Commune '#{commune.name}' updated"
-      end
-    else
-      Repo.insert!(commune_changeset)
-      IO.puts "Commune '#{commune_params[:name]}' created"
-    end
-
+    Repo.insert_or_update!(commune_changeset)
     _add_processed(:communes, commune_params[:name])
   end
 end
