@@ -9,7 +9,9 @@ The next step after [scaffolding my first Phoenix project](/2015-10-22-scaffoldi
 
 The CSV I import is from [open data shared by the French government](https://www.data.gouv.fr/fr/datasets/recensement-des-equipements-sportifs-espaces-et-sites-de-pratiques/). The goal is to read this big (24MB) CSV file and insert records for departments and communes not already registered in the database.
 
-I'm using Phoenix **v1.0.4** in the rest of the article.
+I'm using [Phoenix **v1.1.0**](http://hexdocs.pm/phoenix/1.1.0/Phoenix.html) and [Ecto **v1.1.0**](http://hexdocs.pm/ecto/1.1.0/Ecto.html) in the rest of the article.
+
+A big thanks to José Valim for [proposing an optimization to my code](https://github.com/rymai/rymai.github.io/pull/1) (included in the rest of the article)!
 
 Here are the steps we will follow to import data from the CSV to our database:
 
@@ -22,7 +24,7 @@ Here are the steps we will follow to import data from the CSV to our database:
 
 The first thing I realized was that it would have been inefficient to read the whole file, store its content in memory and loop over it. That's why I started digging through the [`Stream`](http://elixir-lang.org/docs/stable/elixir/Stream.html) module.
 
-After some trial and errors, I stumbled upon the [CSV module](https://github.com/beatrichartz/csv) which gives the following sample code:
+After some trial and errors, I stumbled upon the [CSV module](http://hexdocs.pm/csv/1.2.1/overview.html) which gives the following sample code:
 
 ```elixir
 File.stream!("data.csv") |>
@@ -69,39 +71,21 @@ The second step is the actual work to populate the database.
 Following are the functions needed to insert/update a department into the database:
 
 ```elixir
-defp _process_department(department_params, agent) do
+@doc "Inserts or updates a DB record for the given department params that must contain the :name and :insee_code keys"
+defp _process_department(department_params) do
   # Let's avoid a DB query if this department has already been processed
-  if _get_processed(agent, :departments)[department_params[:name]] do
-    IO.puts "Department '#{department_params[:name]}' already processed"
-  else
-    # Otherwise, try to fetch the department from the DB
-    department = Repo.get_by(Department, insee_code: department_params[:insee_code])
-
-    # And create a changeset
-    department_changeset = _changeset(Department, department, department_params)
-
-    # The department exists already in the DB
-    if department do
-
-      # And its name is good
-      if department.name == department_params[:name] do
-        IO.puts "Department '#{department.name}' is ok"
-
-      # It's named has changed
-      else
-        Repo.update!(department_changeset)
-        IO.puts "Department '#{department.name}' updated"
-      end
-
-    # The department doesn't exist yet in the DB
-    else
-      Repo.insert!(department_changeset)
-      department = Repo.get_by(Department, insee_code: department_params[:insee_code])
-      IO.puts "Department '#{department_params[:name]}' created"
+  unless _get_processed(:departments)[department_params[:name]] do
+    # Otherwise, try to fetch the department from the DB or instantiate an empty record
+    department = case Repo.get_by(Department, insee_code: department_params[:insee_code]) do
+      nil        -> %Department{} # Department not found, we build one
+      department -> department    # Post exists, let's use it
     end
+    # Create a changeset
+    |> Department.changeset(department_params)
+    # Take advantage of `insert_or_update!` from Ecto 1.1
+    |> Repo.insert_or_update!
 
-    # Let's add this department in our agent (we actually store a tuple {department_name => department_id})
-    _add_processed(agent, :departments, department_params[:name], department.id)
+    _add_processed(:departments, department_params[:name], department.id)
   end
 end
 ```
@@ -109,14 +93,17 @@ end
 Similarly, here is the function to insert/update a commune:
 
 ```elixir
+@doc "Inserts or updates a DB record for the given commune params that must contain the :name, :commune_code and :department_id keys"
 defp _process_commune(commune_params) do
-  if Enum.member?(_get_processed(:communes), commune_params[:name]) do
-    IO.puts "Commune '#{commune_params[:name]}' already processed"
-  else
-    commune = Repo.get_by(Commune, commune_code: commune_params[:commune_code]) || %Comune{}
-    commune_changeset = _changeset(Commune, commune, commune_params)
-    Repo.insert_or_update!(commune_changeset)
-    _add_processed(:communes, commune_params[:name])
+  unless Enum.member?(_get_processed(:communes), commune_params[:name]) do
+    commune = case Repo.get_by(Commune, commune_code: commune_params[:commune_code]) do
+      nil     -> %Commune{} # Commune not found, we build one
+      commune -> commune    # Post exists, let's use it
+    end
+    |> Commune.changeset(commune_params)
+    |> Repo.insert_or_update!
+
+    _add_processed(:communes, commune.name)
   end
 end
 ```
@@ -124,7 +111,7 @@ end
 <a name="having-fun-with-an-agent"></a>
 ### 3. Having fun with an agent
 
-To avoid doing two queries per CSV row (one for the department, one for the commune), I am using an [agent](http://elixir-lang.org/docs/stable/elixir/Agent.html). An Elixir Agent is a simple abstraction around state.
+To avoid doing two queries per CSV row (one for the department, one for the commune), I needed to store the already processed departments/communes. I think an [Elixir Agent](http://elixir-lang.org/docs/stable/elixir/Agent.html) is well-suited for that since it's a simple abstraction around state.
 
 As we already saw, I have instantiated an agent with:
 
