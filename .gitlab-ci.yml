@@ -1,0 +1,19 @@
+image: ruby:2.1
+
+# jekyll-coffeescript need a JS runtime...
+before_script:
+  - apt-get update
+  - apt-get upgrade -y
+  - apt-get install nodejs -y
+  - gem install bundler --no-ri --no-rdoc
+  - bundle install --jobs $(nproc)
+
+pages:
+  stage: deploy
+  script:
+    - bundle exec jekyll build -d public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master

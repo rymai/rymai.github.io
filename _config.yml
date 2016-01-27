@@ -12,15 +12,16 @@ paginate: 5
 paginate_path: ':num'
 
 markdown: redcarpet
-highlighter: pygments
+# highlighter: pygments
 # kramdown:
 #   input: GFM
 # redcarpet:
 #   extensions: ['no_intra_emphasis', 'autolink', 'strikethrough', 'space_after_headers']
 
 gems:
-  - jekyll-sitemap
   - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
 
 defaults:
   -
