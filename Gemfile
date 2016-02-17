@@ -1,6 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'github-pages', github: "github/pages-gem", branch: "jekyll-3"
-gem 'listen'
-gem 'guard-sass'
-gem 'bourbon'
+gem 'github-pages'
+
+group :assets do
+  gem 'bourbon'
+end
+
+group :development do
+  gem 'guard-sass', require: false
+end

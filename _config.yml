@@ -1,5 +1,4 @@
-exclude: [CNAME, Gemfile, Gemfile.lock, Guardfile, README.md, sass]
-
+# Site settings
 name: rymai.me
 description: "Web development stuff in english, philosophy/lifestyle thoughts in french!"
 meta_description: "Web development stuff in english, philosophy/lifestyle thoughts in french!"
@@ -11,18 +10,14 @@ google_analytics_id: UA-34888761-1
 paginate: 5
 paginate_path: ':num'
 
-markdown: redcarpet
-# highlighter: pygments
-# kramdown:
-#   input: GFM
-# redcarpet:
-#   extensions: ['no_intra_emphasis', 'autolink', 'strikethrough', 'space_after_headers']
-
+# Build settings
+exclude: [CNAME, Gemfile, Gemfile.lock, Guardfile, README.md, sass]
 gems:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
-
+# kramdown is fucked-up with code blocks!!!
+markdown: redcarpet
 defaults:
   -
     scope:

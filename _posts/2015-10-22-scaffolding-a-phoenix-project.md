@@ -3,7 +3,7 @@ title: "Scaffolding a Phoenix project"
 categories: english elixir
 ---
 
-Last weekend, [Macha](http://www.machada.fr) and I had a new project idea that will need an API server used by an Android app (to begin with). Since I'm [very excited about Elixir and Phoenix](/2015-07-28-why-i-am-excited-about-elixir) these days, that's the perfect occasion to start a new [Phoenix](http://www.phoenixframework.org) project!
+Last weekend, [Macha](http://www.machada.fr) and I had a new project idea that will need an API server used by an Android app (to begin with). Since I'm [very excited about Elixir and Phoenix](/2015/07/28/why-i-am-excited-about-elixir) these days, that's the perfect occasion to start a new [Phoenix](http://www.phoenixframework.org) project!
 
 ### Forewords
 
@@ -276,7 +276,7 @@ Generated geo_sport app
 [info] Running GeoSport.Endpoint with Cowboy on http://localhost:4000
 19 Oct 12:48:13 - info: compiled 5 files into 2 files, copied 3 in 2036ms
 ```
-If you visit [http://localhost:4000/admin/departments](http://localhost:4000/admin/departments), you should see a scaffold page that lists all the departments (none for now). You can create a new department, update it or even delete it from this page. Same thing for the [`Commune` resource]([http://localhost:4000/admin/departments](http://localhost:4000/admin/communes))
+If you visit [http://localhost:4000/admin/departments](http://localhost:4000/admin/departments), you should see a scaffold page that lists all the departments (none for now). You can create a new department, update it or even delete it from this page. Same thing for the [`Commune` resource](http://localhost:4000/admin/communes))
 
 <a name="scaffold-api-controllers"></a>
 ### 6. Scaffold API controllers

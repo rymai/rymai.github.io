@@ -1,1 +1,10 @@
-bundle exec jekyll serve -w -D -V
+#!/usr/bin/env ruby
+
+begin
+  system 'bundle install 1> /dev/null'
+  guard_pid = spawn(*%W(bundle exec guard start --no-interactions))
+  puts "Guard detached with pid '#{guard_pid}'. Run `pkill -f guard' or `kill -9 #{guard_pid}' to stop Guard if not stopped with Ctr-C."
+  system(*%W(bundle exec jekyll serve --watch --drafts --future --incremental))
+ensure
+  Process.kill('TERM', guard_pid)
+end

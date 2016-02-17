@@ -1,7 +1,6 @@
-www.rymai.me
-=============
+## rymai.me
 
-Start the dev server:
+Serve the site:
 ```
 ./serve
 ```

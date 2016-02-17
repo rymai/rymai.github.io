@@ -1,31 +1,3 @@
-GIT
-  remote: git://github.com/github/pages-gem.git
-  revision: 5ddc85b02dc3d25022b1630359622c7e19c25469
-  branch: jekyll-3
-  specs:
-    github-pages (43)
-      RedCloth (= 4.2.9)
-      github-pages-health-check (= 0.6.0)
-      jekyll (= 3.0.2)
-      jekyll-coffeescript (= 1.0.1)
-      jekyll-feed (= 0.3.1)
-      jekyll-gist (= 1.4.0)
-      jekyll-mentions (= 1.0.0)
-      jekyll-paginate (= 1.1.0)
-      jekyll-redirect-from (= 0.9.1)
-      jekyll-sass-converter (= 1.3.0)
-      jekyll-seo-tag (= 0.1.4)
-      jekyll-sitemap (= 0.9.0)
-      jekyll-textile-converter (= 0.1.0)
-      jemoji (= 0.5.1)
-      kramdown (= 1.9.0)
-      liquid (= 3.0.6)
-      mercenary (~> 0.3)
-      rdiscount (= 2.1.8)
-      redcarpet (= 3.3.3)
-      rouge (= 1.10.1)
-      terminal-table (~> 1.4)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -54,6 +26,28 @@ GEM
     ffi (1.9.10)
     formatador (0.2.5)
     gemoji (2.1.0)
+    github-pages (45)
+      RedCloth (= 4.2.9)
+      github-pages-health-check (= 0.6.0)
+      jekyll (= 3.0.2)
+      jekyll-coffeescript (= 1.0.1)
+      jekyll-feed (= 0.3.1)
+      jekyll-gist (= 1.4.0)
+      jekyll-mentions (= 1.0.0)
+      jekyll-paginate (= 1.1.0)
+      jekyll-redirect-from (= 0.9.1)
+      jekyll-sass-converter (= 1.3.0)
+      jekyll-seo-tag (= 0.1.4)
+      jekyll-sitemap (= 0.10.0)
+      jekyll-textile-converter (= 0.1.0)
+      jemoji (= 0.5.1)
+      kramdown (= 1.9.0)
+      liquid (= 3.0.6)
+      mercenary (~> 0.3)
+      rdiscount (= 2.1.8)
+      redcarpet (= 3.3.3)
+      rouge (= 1.10.1)
+      terminal-table (~> 1.4)
     github-pages-health-check (0.6.0)
       addressable (~> 2.3)
       net-dns (~> 0.8)
@@ -99,7 +93,7 @@ GEM
       sass (~> 3.2)
     jekyll-seo-tag (0.1.4)
       jekyll (>= 2.0)
-    jekyll-sitemap (0.9.0)
+    jekyll-sitemap (0.10.0)
     jekyll-textile-converter (0.1.0)
       RedCloth (~> 4.0)
     jekyll-watch (1.3.1)
@@ -111,10 +105,10 @@ GEM
     json (1.8.3)
     kramdown (1.9.0)
     liquid (3.0.6)
-    listen (3.0.3)
+    listen (3.0.5)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
-    lumberjack (1.0.9)
+    lumberjack (1.0.10)
     mercenary (0.3.5)
     method_source (0.8.2)
     mini_portile2 (2.0.0)
@@ -134,14 +128,14 @@ GEM
       method_source (~> 0.8.1)
       slop (~> 3.4)
     public_suffix (1.5.3)
-    rb-fsevent (0.9.6)
-    rb-inotify (0.9.5)
+    rb-fsevent (0.9.7)
+    rb-inotify (0.9.6)
       ffi (>= 0.5.0)
     rdiscount (2.1.8)
     redcarpet (3.3.3)
     rouge (1.10.1)
     safe_yaml (1.0.4)
-    sass (3.4.19)
+    sass (3.4.21)
     sawyer (0.6.0)
       addressable (~> 2.3.5)
       faraday (~> 0.8, < 0.10)
@@ -160,9 +154,8 @@ PLATFORMS
 
 DEPENDENCIES
   bourbon
-  github-pages!
+  github-pages
   guard-sass
-  listen
 
 BUNDLED WITH
    1.11.2

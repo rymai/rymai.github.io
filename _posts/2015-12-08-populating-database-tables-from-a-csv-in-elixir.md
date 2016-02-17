@@ -3,7 +3,7 @@ title: "Populating database tables from a CSV in Elixir"
 categories: english elixir
 ---
 
-The next step after [scaffolding my first Phoenix project](/2015-10-22-scaffolding-a-phoenix-project) was to populate my database with data representing French [departments](https://en.wikipedia.org/wiki/Departments_of_France) (departments are administrative divisions, we have 101 of them) and [communes](https://en.wikipedia.org/wiki/Communes_of_France) (communes are the smallest administrative divisions, we have 36,681 of them!).
+The next step after [scaffolding my first Phoenix project](/2015/10/22/scaffolding-a-phoenix-project) was to populate my database with data representing French [departments](https://en.wikipedia.org/wiki/Departments_of_France) (departments are administrative divisions, we have 101 of them) and [communes](https://en.wikipedia.org/wiki/Communes_of_France) (communes are the smallest administrative divisions, we have 36,681 of them!).
 
 ### Forewords
 

@@ -32,7 +32,7 @@ Pour pouvoir parler d'un sujet, il faut d'abord écouter ce que les autres ont �
 
 #### _"Faire preuve de bienveillance envers autrui."_
 
-Il est tellement facile de faire du mal sans s'en même rendre compte qu'il est important d'être activement bienveillant envers son prochain. De plus, être bienveillant avec quelqu'un augmente les chances que cette personne soit bienveillante avec moi en retour.
+Il est tellement facile de faire du mal sans même s'en rendre compte qu'il est important d'être activement bienveillant envers son prochain. De plus, être bienveillant avec quelqu'un augmente les chances que cette personne soit bienveillante avec moi en retour.
 
 #### _"Apprécier les gens pour leurs qualités plutôt que de se concentrer sur leur défauts."_
 
