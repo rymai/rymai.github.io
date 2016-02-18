@@ -2,7 +2,7 @@
 name: rymai.me
 description: "Web development stuff in english, philosophy/lifestyle thoughts in french!"
 meta_description: "Web development stuff in english, philosophy/lifestyle thoughts in french!"
-root_url: http://www.rymai.me
+root_url: https://www.rymai.me
 permalink: /:year/:month/:day/:title/
 
 google_analytics_id: UA-34888761-1
