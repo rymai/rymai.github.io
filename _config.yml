@@ -10,8 +10,8 @@ google_analytics_id: UA-34888761-1
 paginate: 5
 paginate_path: ':num'
 
-# Build settings
-exclude: [CNAME, Gemfile, Gemfile.lock, Guardfile, README.md, sass]
+# Build settings, exclude vendor (this is where Gems are installed during CI build)
+exclude: [CNAME, Gemfile, Gemfile.lock, Guardfile, README.md, sass, vendor]
 gems:
   - jekyll-feed
   - jekyll-paginate
