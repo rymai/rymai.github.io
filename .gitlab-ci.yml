@@ -6,7 +6,7 @@ before_script:
   - apt-get upgrade -y
   - apt-get install nodejs -y
   - gem install bundler --no-ri --no-rdoc
-  - bundle install --jobs $(nproc) --deployment --full-index
+  - bundle install --jobs $(nproc) --deployment --without development --full-index
 
 pages:
   stage: deploy
