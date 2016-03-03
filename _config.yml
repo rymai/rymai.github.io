@@ -16,8 +16,11 @@ gems:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
-# kramdown is fucked-up with code blocks!!!
-markdown: redcarpet
+# These are the default on GitHub Pages:
+# https://help.github.com/articles/configuring-jekyll/#defaults-you-can-change
+kramdown:
+  input: GFM
+  hard_wrap: false
 defaults:
   -
     scope:
