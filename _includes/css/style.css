@@ -175,6 +175,7 @@ article .post-content img {
     float: none;
     text-align: center; } }
 article .post-content footer {
+  margin-top: 20px;
   border-top: 1px solid #BBB;
   font-size: smaller; }
 
