@@ -4,6 +4,7 @@ description: "Web development stuff in english, philosophy/lifestyle thoughts in
 meta_description: "Web development stuff in english, philosophy/lifestyle thoughts in french!"
 root_url: https://www.rymai.me
 permalink: /:year/:month/:day/:title/
+repository_url: https://gitlab.com/rymai/rymai.gitlab.io
 
 google_analytics_id: UA-34888761-1
 
